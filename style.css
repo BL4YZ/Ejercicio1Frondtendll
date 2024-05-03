@@ -1,0 +1,46 @@
+/* Estilo para el tablero */
+#tablero {
+    margin: 0 auto; /* Centrar el tablero horizontalmente */
+    display: grid;
+    place-items: center;
+}
+
+table {
+    border-collapse: collapse; /* Colapsar bordes de las celdas */
+    border: 2px solid #333; /* Borde del tablero */
+}
+
+td {
+    width: 50px; /* Ancho de las celdas */
+    height: 50px; /* Alto de las celdas */
+    text-align: center; /* Alinear contenido al centro */
+    font-size: 24px; /* Tamaño de la fuente */
+    border: 1px solid #999; /* Borde de las celdas */
+}
+
+/* Estilo para las fichas */
+#cuadrante-1::after, #cuadrante-2::after, #cuadrante-3::after,
+#cuadrante-4::after, #cuadrante-5::after, #cuadrante-6::after,
+#cuadrante-7::after, #cuadrante-8::after, #cuadrante-9::after {
+    content: attr(data-mark); /* Contenido de las fichas (X o O) */
+    display: block; /* Mostrar como bloque para aplicar estilos */
+    font-size: 36px; /* Tamaño de la ficha */
+}
+
+/* Estilo para las fichas X */
+#cuadrante-1[data-mark="X"]::after, #cuadrante-2[data-mark="X"]::after,
+#cuadrante-3[data-mark="X"]::after, #cuadrante-4[data-mark="X"]::after,
+#cuadrante-5[data-mark="X"]::after, #cuadrante-6[data-mark="X"]::after,
+#cuadrante-7[data-mark="X"]::after, #cuadrante-8[data-mark="X"]::after,
+#cuadrante-9[data-mark="X"]::after {
+    color: blue; /* Color de las fichas X */
+}
+
+/* Estilo para las fichas O */
+#cuadrante-1[data-mark="O"]::after, #cuadrante-2[data-mark="O"]::after,
+#cuadrante-3[data-mark="O"]::after, #cuadrante-4[data-mark="O"]::after,
+#cuadrante-5[data-mark="O"]::after, #cuadrante-6[data-mark="O"]::after,
+#cuadrante-7[data-mark="O"]::after, #cuadrante-8[data-mark="O"]::after,
+#cuadrante-9[data-mark="O"]::after {
+    color: red; /* Color de las fichas O */
+}
